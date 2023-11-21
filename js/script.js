@@ -5,12 +5,16 @@ function getNewSquare (){
     return newSquareElement
 }
 
+
+
 const buttonElement = document.querySelector('button');
 
 
 buttonElement.addEventListener('click' , function(){
     const mainContentEl = document.querySelector('main section.main-content');
 
+    const reset = document.querySelector("section.main-content");
+    reset.innerHTML = "";
     
 
     for (let i = 1; i <= 100; i ++){
@@ -22,6 +26,7 @@ buttonElement.addEventListener('click' , function(){
 
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.toggle('clicked');
+        console.log(squareContent)
     });
 
     mainContentEl.appendChild(currentSquare);
