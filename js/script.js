@@ -5,15 +5,37 @@ function getNewSquare (){
     return newSquareElement
 }
 
-const mainContentEl = document.querySelector('main section.main-content');
+const buttonElement = document.querySelector('button');
 
-for (let i = 1; i <= 100; i ++){
+
+buttonElement.addEventListener('click' , function(){
+    const mainContentEl = document.querySelector('main section.main-content');
+
+    for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
-    const squareContent = i
+    const squareContent = i;
+    currentSquare.innerHTML += `<span> ${squareContent}</span>`
+    
 
     currentSquare.addEventListener('click', function(){
         currentSquare.classList.toggle('clicked');
     });
 
     mainContentEl.appendChild(currentSquare);
+    
+}
+
+
+
+})
+
+
+
+
+
+
+
+
+function getRandomNumber (minNumber, maxNumber){
+    return Math.floor(Math.random()*(maxNumber - minNumber + 1) + minNumber)
 }

@@ -23,13 +23,15 @@ main{
 
 section.main-content{
     width: 500px;
+    
     height: 500px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid black;
 }
 
-section.main-content article.item-square{
+section.main-content article.items-square{
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 2px solid black;
@@ -41,7 +43,7 @@ section.main-content article.item-square{
     
 }
 
-section.main-content article.item-square.clicked{
-    background-color: azure;
+section.main-content article.items-square.clicked{
+    background-color: rgb(14, 174, 254);
 }
 
