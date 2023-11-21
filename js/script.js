@@ -11,10 +11,13 @@ const buttonElement = document.querySelector('button');
 buttonElement.addEventListener('click' , function(){
     const mainContentEl = document.querySelector('main section.main-content');
 
+    
+
     for (let i = 1; i <= 100; i ++){
     const currentSquare = getNewSquare();
     const squareContent = i;
     currentSquare.innerHTML += `<span> ${squareContent}</span>`
+    currentSquare.classList.add('clicked')
     
 
     currentSquare.addEventListener('click', function(){
