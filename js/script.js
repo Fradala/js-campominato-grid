@@ -5,6 +5,27 @@ function getNewSquare (){
     return newSquareElement
 }
 
+const mainContentEl = document.querySelector('main section.main-content');
+
+    const reset = document.querySelector("section.main-content");
+    reset.innerHTML = "";
+    
+
+    for (let i = 1; i <= 100; i ++){
+    const currentSquare = getNewSquare();
+    const squareContent = i;
+    currentSquare.innerHTML += `<span> ${squareContent}</span>`
+    currentSquare.classList.toggle('clicked')
+    
+
+    currentSquare.addEventListener('click', function(){
+        currentSquare.classList.toggle('clicked');
+        console.log(squareContent)
+    });
+
+    mainContentEl.appendChild(currentSquare);
+    
+}
 
 
 const buttonElement = document.querySelector('button');
@@ -36,12 +57,6 @@ buttonElement.addEventListener('click' , function(){
 
 
 })
-
-
-
-
-
-
 
 
 function getRandomNumber (minNumber, maxNumber){

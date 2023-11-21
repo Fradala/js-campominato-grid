@@ -39,11 +39,11 @@ section.main-content article.items-square{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(0, 102, 245);
     
 }
 
 section.main-content article.items-square.clicked{
-    background-color: rgb(254, 230, 14);
+    background-color: aqua;
 }
 
